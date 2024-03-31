@@ -1,3 +1,5 @@
+exec pipewire
+
 set $mod Mod4
 
 set $term kitty
@@ -10,6 +12,7 @@ output * bg Anime-wallpapers-arts.jpg fill
     bindsym $mod+q exec $term
     bindsym $mod+d exec $menu
     bindsym $mod+e exec $filemanager
+    bindsym print exec grim -g "$(slurp -d)" - | wl-copy
 
     bindsym $mod+c kill
 
@@ -82,8 +85,7 @@ bar {
     
     position bottom
 
-    status_command while date +'%Y-%m-%d %X'
-    height 22%
+    status_command while ~/.config/sway/bar.sh; do sleep 1; done
 
     colors {
         statusline #ffffff
