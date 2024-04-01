@@ -1,2 +1,2 @@
 #yüklenecek paketler:
-kitty neofetch grim slurp
+kitty neofetch grim slurp nnn 
