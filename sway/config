@@ -1,18 +1,20 @@
-exec pipewire
-
 set $mod Mod4
 
-set $term kitty
+set $term kitty -o background_opacity=0.6
 set $filemanager kitty nnn -H
 set $menu wofi --show drun
+set $seskontrol pavucontrol
 
 output * bg Anime-wallpapers-arts.jpg fill
+
+	bindsym XF86Search exec chromium
 
 
     bindsym $mod+q exec $term
     bindsym $mod+d exec $menu
     bindsym $mod+e exec $filemanager
     bindsym print exec grim -g "$(slurp -d)" - | wl-copy
+    bindsym $mod+w exec $seskontrol
 
     bindsym $mod+c kill
 
@@ -97,6 +99,7 @@ bar {
 input type:keyboard {
     xkb_layout tr
 }
+
 
 font pango:ComicMono-Bold 12
 
