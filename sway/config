@@ -1,6 +1,7 @@
 set $mod Mod4
 
 set $term kitty -o background_opacity=0.6
+<<<<<<< HEAD
 set $filemanager kitty nnn -H
 set $menu wofi --show drun
 set $seskontrol pavucontrol
@@ -8,10 +9,28 @@ set $seskontrol pavucontrol
 output * bg Anime-wallpapers-arts.jpg fill
 
 	bindsym XF86Search exec chromium
+=======
+set $filemanager kitty -o background_opacity=0.6 ranger
+set $menu wofi --show drun
+set $seskontrol pavucontrol
+set $tarayici chromium
+set $mail thunderbird
+
+output * bg Anime-wallpapers-arts.jpg fill
+
+    bindsym XF86Favorites exec $filemanager
+    bindsym XF86Mail exec $mail
+	bindsym XF86Search exec $tarayici
+    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5% #ses arttır
+    bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5% # ses azalt
+    bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle # sustur/ses aç
+    bindsym XF86AudioPlay exec playerctl play-pause #müzik durdur/devam et
+>>>>>>> f5b5198 (ma)
 
 
     bindsym $mod+q exec $term
     bindsym $mod+d exec $menu
+<<<<<<< HEAD
     bindsym $mod+e exec $filemanager
     bindsym print exec grim -g "$(slurp -d)" - | wl-copy
     bindsym $mod+w exec $seskontrol
@@ -19,6 +38,14 @@ output * bg Anime-wallpapers-arts.jpg fill
     bindsym $mod+c kill
 
     
+=======
+    bindsym print exec grim -g "$(slurp -d)" - | wl-copy
+    bindsym $mod+w exec $seskontrol
+    bindsym $mod+c kill
+
+    for_window [window_type="dialog"] floating enable
+    for_window [window_role="dialog"] floating enable
+>>>>>>> f5b5198 (ma)
 
     floating_modifier $mod normal
 

@@ -1,5 +1,9 @@
 function fish_greeting
+<<<<<<< HEAD
     neofetch
+=======
+    ufetch
+>>>>>>> f5b5198 (ma)
 
 end
 

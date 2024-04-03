@@ -1,6 +1,12 @@
 chromium
 Code
+<<<<<<< HEAD
 pulse
 dconf
 spotify
 vlc
+=======
+htop
+mimeapps.list
+pavucontrol.ini
+>>>>>>> f5b5198 (ma)
