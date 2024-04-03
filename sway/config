@@ -1,7 +1,7 @@
 set $mod Mod4
 
 set $term kitty -o background_opacity=0.6
-set $filemanager kitty nnn -H
+set $filemanager kitty -o background_opacity=0.6 ranger 
 set $menu wofi --show drun
 set $seskontrol pavucontrol
 
