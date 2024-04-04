@@ -4,10 +4,23 @@ set $term kitty -o background_opacity=0.6
 set $filemanager kitty -o background_opacity=0.6 ranger 
 set $menu wofi --show drun
 set $seskontrol pavucontrol
+set $mail thunderbird
+
 
 output * bg Anime-wallpapers-arts.jpg fill
 
 	bindsym XF86Search exec chromium
+    bindsym XF86Favorites exec $filemanager
+    bindsym XF86Mail exec $mail
+
+    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5% #ses arttır
+    bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5% #ses azalt
+    bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle #ses sustur
+    bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle #mikrofon sustur
+    bindsym XF86AudioPlay exec playerctl play-pause #müzik durdur/devam et
+    bindsym XF86AudioNext exec playerctl next #sonraki
+    bindsym XF86AudioPrev exec playerctl previous #önceki
+
 
     bindsym $mod+q exec $term
     bindsym $mod+d exec $menu

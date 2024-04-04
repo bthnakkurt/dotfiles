@@ -6,4 +6,6 @@ spotify
 vlc
 launcher
 autostart
+pulse
+pavucontrol.ini
 .gitignore
