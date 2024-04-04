@@ -9,15 +9,12 @@ output * bg Anime-wallpapers-arts.jpg fill
 
 	bindsym XF86Search exec chromium
 
-
     bindsym $mod+q exec $term
     bindsym $mod+d exec $menu
     bindsym $mod+e exec $filemanager
     bindsym print exec grim -g "$(slurp -d)" - | wl-copy
-    bindsym $mod+w exec $
-    bindsym $mod+c kill
-
-    
+    bindsym $mod+w exec $seskontrol
+    bindsym $mod+c kill    
 
     floating_modifier $mod normal
 

@@ -4,4 +4,6 @@ pulse
 dconf
 spotify
 vlc
+launcher
+autostart
 .gitignore
