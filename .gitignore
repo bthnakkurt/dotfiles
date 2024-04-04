@@ -9,3 +9,4 @@ autostart
 pulse
 pavucontrol.ini
 .gitignore
+.vscode
