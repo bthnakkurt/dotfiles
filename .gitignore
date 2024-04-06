@@ -1,8 +1,15 @@
 
-/chromium
 /autostart
-/launcher
+/chromium
 /Code
+/glib-2.0/settings
+/gtk-3.0
+/launcher
 /pulse
-pulse
-.vscode/settings.json
+/pavucontrol.ini
+/mimeapps.list
+/spotify
+/pulse
+/obs-studio
+/omf
+/glib-2.0
