@@ -8,7 +8,7 @@ set $mail thunderbird
 set $webbrowser chromium
 
 
-output * bg bg.jpg fill
+output * bg ../res/bg.jpg fill
 
     bindsym XF86Search exec $webbrowser
     bindsym XF86Favorites exec $filemanager
