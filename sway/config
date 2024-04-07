@@ -5,7 +5,7 @@ set $filemanager kitty -o background_opacity=0.6 ranger
 set $menu wofi --show drun
 set $seskontrol pavucontrol
 set $mail thunderbird
-set $webbrowser firefox
+set $webbrowser chromium
 
 
 output * bg bg.jpg fill
@@ -26,7 +26,7 @@ output * bg bg.jpg fill
     bindsym $mod+q exec $term
     bindsym $mod+d exec $menu
     bindsym $mod+e exec $filemanager
-    bindsym print exec grim -g "$(slurp -d)" - | wl-copy
+    bindsym print exec grim -g "$(slurp)" -t png - | wl-copy -t image/png
     bindsym $mod+w exec $seskontrol
     bindsym $mod+c kill    
 
@@ -113,8 +113,6 @@ input type:keyboard {
 }
 
 
-
-font pango:ComicMono-Bold 12
 
 default_border pixel
 
