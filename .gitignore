@@ -1,6 +1,8 @@
 
 /autostart
 /chromium
+/Code - OSS
+/dconf
 /Code
 /glib-2.0/settings
 /gtk-3.0

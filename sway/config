@@ -5,11 +5,12 @@ set $filemanager kitty -o background_opacity=0.6 ranger
 set $menu wofi --show drun
 set $seskontrol pavucontrol
 set $mail thunderbird
+set $webbrowser firefox
 
 
-output * bg Anime-wallpapers-arts.jpg fill
+output * bg bg.jpg fill
 
-	bindsym XF86Search exec chromium
+    bindsym XF86Search exec $webbrowser
     bindsym XF86Favorites exec $filemanager
     bindsym XF86Mail exec $mail
 
