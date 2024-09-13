@@ -1,24 +1,23 @@
 [Default Applications]
-x-scheme-handler/http=userapp-Firefox-LVQJL2.desktop
-x-scheme-handler/https=userapp-Firefox-LVQJL2.desktop
-x-scheme-handler/chrome=userapp-Firefox-LVQJL2.desktop
-text/html=userapp-Firefox-LVQJL2.desktop
-application/x-extension-htm=userapp-Firefox-LVQJL2.desktop
-application/x-extension-html=userapp-Firefox-LVQJL2.desktop
-application/x-extension-shtml=userapp-Firefox-LVQJL2.desktop
-application/xhtml+xml=userapp-Firefox-LVQJL2.desktop
-application/x-extension-xhtml=userapp-Firefox-LVQJL2.desktop
-application/x-extension-xht=userapp-Firefox-LVQJL2.desktop
+x-scheme-handler/http=userapp-Firefox-SDHUT2.desktop
+x-scheme-handler/https=userapp-Firefox-SDHUT2.desktop
+x-scheme-handler/chrome=userapp-Firefox-SDHUT2.desktop
+text/html=userapp-Firefox-SDHUT2.desktop
+application/x-extension-htm=userapp-Firefox-SDHUT2.desktop
+application/x-extension-html=userapp-Firefox-SDHUT2.desktop
+application/x-extension-shtml=userapp-Firefox-SDHUT2.desktop
+application/xhtml+xml=userapp-Firefox-SDHUT2.desktop
+application/x-extension-xhtml=userapp-Firefox-SDHUT2.desktop
+application/x-extension-xht=userapp-Firefox-SDHUT2.desktop
 
 [Added Associations]
-x-scheme-handler/http=userapp-Firefox-LVQJL2.desktop;
-x-scheme-handler/https=userapp-Firefox-LVQJL2.desktop;
-x-scheme-handler/chrome=userapp-Firefox-LVQJL2.desktop;
-text/html=userapp-Firefox-LVQJL2.desktop;
-application/x-extension-htm=userapp-Firefox-LVQJL2.desktop;
-application/x-extension-html=userapp-Firefox-LVQJL2.desktop;
-application/x-extension-shtml=userapp-Firefox-LVQJL2.desktop;
-application/xhtml+xml=userapp-Firefox-LVQJL2.desktop;
-application/x-extension-xhtml=userapp-Firefox-LVQJL2.desktop;
-application/x-extension-xht=userapp-Firefox-LVQJL2.desktop;
-
+x-scheme-handler/http=userapp-Firefox-LVQJL2.desktop;userapp-Firefox-SDHUT2.desktop;
+x-scheme-handler/https=userapp-Firefox-LVQJL2.desktop;userapp-Firefox-SDHUT2.desktop;
+x-scheme-handler/chrome=userapp-Firefox-LVQJL2.desktop;userapp-Firefox-SDHUT2.desktop;
+text/html=userapp-Firefox-LVQJL2.desktop;userapp-Firefox-SDHUT2.desktop;
+application/x-extension-htm=userapp-Firefox-LVQJL2.desktop;userapp-Firefox-SDHUT2.desktop;
+application/x-extension-html=userapp-Firefox-LVQJL2.desktop;userapp-Firefox-SDHUT2.desktop;
+application/x-extension-shtml=userapp-Firefox-LVQJL2.desktop;userapp-Firefox-SDHUT2.desktop;
+application/xhtml+xml=userapp-Firefox-LVQJL2.desktop;userapp-Firefox-SDHUT2.desktop;
+application/x-extension-xhtml=userapp-Firefox-LVQJL2.desktop;userapp-Firefox-SDHUT2.desktop;
+application/x-extension-xht=userapp-Firefox-LVQJL2.desktop;userapp-Firefox-SDHUT2.desktop;
