@@ -3,9 +3,24 @@ chromium
 Code
 dconf
 fontforge
-glib-2.0
-gtk-3.0
-pulse
 pavucontrol.ini
 QtProject.conf
 mimeapps.list
+autostart
+discord
+Electron
+github-copilot
+go
+htop
+libvirt
+Nextcloud
+obs-studio
+PreMiD
+PreMiD Portable
+procps
+pulse
+rustdesk
+spicetify
+spotify
+Youtube Music
+polybar/token.token
