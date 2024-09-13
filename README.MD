@@ -1,3 +1,10 @@
-# YUKLEECNCEK UYGLAR
-
-kitty ufetch wofi sway fish-shell grim slurp wl-clipboard pavuconrol noto-sans-emoji
+- neovim
+- kitty or alacritty
+- bspwm sxhkd      sway(not anymore)
+- flameshot, ssr, feh, fastfetch
+- firefox or chromium
+- rofi, bash (fish sometimes)
+- mpv, picom
+- polybar or yambar
+- pavucontrol
+- 
