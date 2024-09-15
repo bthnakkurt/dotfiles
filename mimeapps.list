@@ -9,6 +9,8 @@ application/x-extension-shtml=userapp-Firefox-SDHUT2.desktop
 application/xhtml+xml=userapp-Firefox-SDHUT2.desktop
 application/x-extension-xhtml=userapp-Firefox-SDHUT2.desktop
 application/x-extension-xht=userapp-Firefox-SDHUT2.desktop
+x-scheme-handler/tg=userapp-64Gram Desktop-IZ73T2.desktop
+x-scheme-handler/tonsite=userapp-64Gram Desktop-VEC4T2.desktop
 
 [Added Associations]
 x-scheme-handler/http=userapp-Firefox-LVQJL2.desktop;userapp-Firefox-SDHUT2.desktop;
@@ -21,3 +23,5 @@ application/x-extension-shtml=userapp-Firefox-LVQJL2.desktop;userapp-Firefox-SDH
 application/xhtml+xml=userapp-Firefox-LVQJL2.desktop;userapp-Firefox-SDHUT2.desktop;
 application/x-extension-xhtml=userapp-Firefox-LVQJL2.desktop;userapp-Firefox-SDHUT2.desktop;
 application/x-extension-xht=userapp-Firefox-LVQJL2.desktop;userapp-Firefox-SDHUT2.desktop;
+x-scheme-handler/tg=userapp-64Gram Desktop-IZ73T2.desktop;
+x-scheme-handler/tonsite=userapp-64Gram Desktop-VEC4T2.desktop;

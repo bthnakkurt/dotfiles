@@ -5,6 +5,7 @@
 
 alias ls='eza -a --color=always --sort=type'
 alias rm='trash'
+alias du='dust'
 alias df='df -h'
 
 export HISTFILE="/home/bai/.config/bash/.bash_history"
@@ -56,3 +57,4 @@ command_not_found_handle() {
     echo "${POSSIBLE_PKGS}"
   fi
 }
+. "$HOME/.cargo/env"
