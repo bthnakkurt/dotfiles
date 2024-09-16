@@ -10,6 +10,9 @@ super + p
 super + z
 	zathura
 
+super + e
+   alacritty -e yazi
+
 super + d
 	rofi -i -show drun -modi drun -show-icons
 
@@ -40,8 +43,10 @@ super + {_,shift + }{Left,Down,Up,Right}
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
+
+
 super + @space
-	bspc node -t floating
+	bspc node -t \~floating
 
 XF86MonBrightnessDown
 	brillo -U 5

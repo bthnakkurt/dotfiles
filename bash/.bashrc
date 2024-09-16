@@ -7,8 +7,11 @@ alias ls='eza -a --color=always --sort=type'
 alias rm='trash'
 alias du='dust'
 alias df='df -h'
+alias free='free -h'
 
 export HISTFILE="/home/bai/.config/bash/.bash_history"
+
+export MANPAGER='nvim +Man!'
 
 PS1='[\u@\h \W]\$ '
 
