@@ -8,6 +8,9 @@ alias rm='trash'
 alias du='dust'
 alias df='df -h'
 alias free='free -h'
+alias reboot='sudo reboot'
+alias update-grub='sudo update-grub'
+alias cr='cargo run'
 
 export HISTFILE="/home/bai/.config/bash/.bash_history"
 
@@ -41,8 +44,6 @@ bind "set show-all-if-ambiguous on"
 bind "set menu-complete-display-prefix on"
 
 fastfetch -c /home/bai/.config/fastfetch/11.jsonc
-sex
-
 
 shopt -s checkwinsize
 shopt -s autocd

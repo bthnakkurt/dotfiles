@@ -1,8 +1,17 @@
 super + q
 	alacritty
 
+@button8
+	pactl set-sink-volume 0 -5%
+
+@button9
+	pactl set-sink-volume 0 +5%
+
 super + a
 	firefox
+
+super + w
+	alacritty -e vim
 
 super + p
 	pkill polybar & polybar

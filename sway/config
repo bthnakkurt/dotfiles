@@ -5,7 +5,7 @@ set $filemanager kitty -o background_opacity=0.6 ranger
 set $menu wofi --show drun
 set $seskontrol pavucontrol
 set $mail thunderbird
-set $webbrowser chromium
+set $webbrowser firefox
 
 
 output * bg ../res/bg.jpg fill
