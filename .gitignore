@@ -11,7 +11,6 @@ discord
 Electron
 github-copilot
 go
-htop
 libvirt
 Nextcloud
 obs-studio
@@ -35,3 +34,10 @@ whatsapp-desktop-linux
 pavucontrol.ini
 QtProject.conf
 browsh
+xfce4
+vesktop
+Thunar
+htop
+bash/.bash_history
+htop/htoprc
+bash/.bash_profile
