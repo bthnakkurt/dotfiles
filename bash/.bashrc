@@ -11,10 +11,10 @@ alias free='free -h'
 alias reboot='sudo reboot'
 alias update-grub='sudo update-grub'
 alias cr='cargo run'
+alias ch='chmod +x'
 
 export HISTFILE="/home/bai/.config/bash/.bash_history"
 
-export MANPAGER='nvim +Man!'
 
 PS1='[\u@\h \W]\$ '
 

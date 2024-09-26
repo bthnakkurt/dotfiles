@@ -7,6 +7,12 @@ super + q
 @button9
 	pactl set-sink-volume 0 +5%
 
+super + @button8
+  playerctl previous
+
+super + @button9
+  playerctl next
+
 super + a
 	firefox
 
