@@ -1,0 +1,92 @@
+super + q
+	alacritty
+
+@button8
+	pactl set-sink-volume 0 -5%
+
+@button9
+	pactl set-sink-volume 0 +5%
+
+super + @button8
+  playerctl previous
+
+super + @button9
+  playerctl next
+
+super + a
+	firefox
+
+super + w
+	alacritty -e vim
+
+super + p
+	pkill polybar & polybar
+
+super + z
+	zathura
+
+super + e
+   alacritty -e yazi
+
+super + d
+	rofi -i -show drun -modi drun -show-icons
+
+super + m
+	bspc quit
+
+super + shift + c
+	bspc wm -r
+
+Print
+	flameshot gui
+
+super + s
+	spotify
+
+super + r
+	pavucontrol
+
+super + c
+	bspc node -c
+
+super + alt + c
+	pkill -USR1 -x sxhkd
+
+super + {_,shift + }{Left,Down,Up,Right}
+	bspc node -{f,s} {west,south,north,east}
+
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+
+
+super + @space
+	bspc node -t \~floating
+
+XF86MonBrightnessDown
+	brillo -U 5
+
+XF86MonBrightnessUp
+	brillo -A 5
+
+XF86AudioMute
+	pactl set-sink-mute 0 toggle
+
+XF86AudioLowerVolume
+	pactl set-sink-volume 0 -5%
+
+XF86AudioRaiseVolume
+	pactl set-sink-volume 0 +5%
+
+XF86AudioPlay
+	playerctl play-pause
+
+XF86AudioStop
+	playerctl stop
+
+XF86AudioPrev
+	playerctl previous
+
+XF86AudioNext
+	playerctl next
+
