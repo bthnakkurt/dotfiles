@@ -1,0 +1,35 @@
+alias ls='eza -a --color=always --sort=type'
+alias rm='trash'
+alias du='dust'
+alias df='df -h'
+alias free='free -h'
+alias cr='cargo run'
+alias ch='chmod +x'
+
+HISTFILE=/home/bai/.yash_history # where to save history
+HISTSIZE=5000 # how many lines
+
+fastfetch -c /home/bai/.config/fastfetch/11.jsonc # run fastfetch at startup
+
+bindkey --vi-insert '\^R'  vi-search-backward # search in history
+bindkey --vi-command '\^R'  vi-search-backward # search in histor
+bindkey --vi-insert '\^L' clear-and-redraw-all # clear screen
+bindkey --vi-command '\^L' clear-and-redraw-all # clear screen
+bindkey --vi-insert '\^M'  accept-line 
+
+_update_direnv() {
+  eval "$(
+    direnv export json |
+    jq -r 'to_entries | .[] |
+    if .value == null then
+      @sh "unset \(.key)"
+    else
+      @sh "export \(.key)=\(.value)"
+    end'
+  )"
+}
+YASH_AFTER_CD=("$YASH_AFTER_CD" '_update_direnv')
+
+export PATH=.cargo/bin/:$PATH
+
+# vim: set et sw=2 sts=2 tw=78 ft=sh:
