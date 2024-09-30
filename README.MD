@@ -1,6 +1,6 @@
 # apps:
   
-foot (alacritty or kitty) fastfetch(or ufetch) fuzzel(or wofi) sway yash(fish or bash) grim slurp wl-clipboard pavuconrol
+foot (alacritty or kitty) fastfetch(or ufetch) fuzzel(or wofi) niri(sway) yash(fish or bash) grim slurp wl-clipboard pavuconrol
 
 themes:
 
