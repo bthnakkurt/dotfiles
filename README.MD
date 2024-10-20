@@ -4,9 +4,9 @@ foot (alacritty or kitty) fastfetch(or ufetch) fuzzel(or wofi) niri(sway) yash(f
 
 themes:
 
-tema: https://github.com/catppuccin/gtk
+tema: https://www.gnome-look.org/p/1996672
 
-cursor: https://www.gnome-look.org/p/1914825
+cursor: https://www.gnome-look.org/p/2135236
 
 icon: https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
 
