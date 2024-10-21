@@ -62,3 +62,5 @@ command_not_found_handle() {
   fi
 }
 . "$HOME/.cargo/env"
+
+complete -F _command doas
