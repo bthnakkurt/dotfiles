@@ -3,18 +3,19 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='eza -a --color=always --sort=type'
+alias ls='eza --color=always --color-scale-mode=gradient --icons=always --hyperlink -a --group-directories-first -s=Extension'
 alias rm='trash'
-alias du='dust'
 alias df='df -h'
 alias free='free -h'
 alias reboot='sudo reboot'
 alias update-grub='sudo update-grub'
 alias cr='cargo run'
 alias ch='chmod +x'
+alias cat='bat'
 
 export HISTFILE="/home/bai/.config/bash/.bash_history"
-
+export XCURSOR_THEME="catppuccin"
+export XCURSOR_SIZE=20
 
 PS1='[\u@\h \W]\$ '
 
@@ -61,6 +62,17 @@ command_not_found_handle() {
     echo "${POSSIBLE_PKGS}"
   fi
 }
-. "$HOME/.cargo/env"
 
 complete -F _command doas
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# fnm
+FNM_PATH="/home/bai/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
+export XCURSOR_PATH=${XCURSOR_PATH}:~/.local/share/icons

@@ -24,6 +24,7 @@ awful.rules.rules = {
     { rule_any = {
         role = {
           "alert",
+          "tk"
         }
       }, properties = { floating = true }},
 

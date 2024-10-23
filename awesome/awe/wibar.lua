@@ -3,12 +3,41 @@ local awful = require("awful")
 local wibox = require("wibox")
 local gears = require("gears")
 local beautiful = require("beautiful")
+-- custom widget
+local volume_widget = require('awesome-wm-widgets.pactl-widget.volume')
+local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
+local ram_widget = require("awesome-wm-widgets.ram-widget.ram-widget")
 
+local ram = ram_widget({
+    timeout = 10,
+    widget_show_buf=true
+})
 
+local volume = volume_widget({
+    tooltip=true
+})
 
+local battery = battery_widget({
+    show_current_level=true,
+    display_notification=true,
+    warning_msg_title = "şarj bitiyor, kaptan",
+    warning_msg_text = "şarja taksan iyi olur!!!"
+})
 
-mykeyboardlayout = awful.widget.keyboardlayout()
 mytextclock = wibox.widget.textclock()
+
+local sep_1 = wibox.widget {
+    shape = gears.shape.star,
+    widget = wibox.widget.separator,
+    orientation = "vertical",
+    forced_width = 10,}
+
+local sep_2 = wibox.widget {
+    shape = gears.shape.powerline,
+    widget = wibox.widget.separator,
+    forced_width = 16,
+}
+
 
 local taglist_buttons = gears.table.join(
                     awful.button({ }, 1, function(t) t:view_only() end),
@@ -29,25 +58,9 @@ local taglist_buttons = gears.table.join(
 
 local tasklist_buttons = gears.table.join(
                      awful.button({ }, 1, function (c)
-                                              if c == client.focus then
-                                                  c.minimized = true
-                                              else
-                                                  c:emit_signal(
-                                                      "request::activate",
-                                                      "tasklist",
-                                                      {raise = true}
-                                                  )
-                                              end
-                                          end),
-                     awful.button({ }, 3, function()
-                                              awful.menu.client_list({ theme = { width = 250 } })
-                                          end),
-                     awful.button({ }, 4, function ()
-                                              awful.client.focus.byidx(1)
-                                          end),
-                     awful.button({ }, 5, function ()
-                                              awful.client.focus.byidx(-1)
                                           end))
+
+
 local function set_wallpaper(s)
     -- Wallpaper
     if beautiful.wallpaper then
@@ -103,15 +116,23 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
             mylauncher,
+            sep_1,
             s.mytaglist,
+            sep_1,
             s.mypromptbox,
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            mykeyboardlayout,
+            ram,
+            sep_2,
+            volume,
+            sep_2,
+            battery,
+            sep_2,
             wibox.widget.systray(),
             mytextclock,
+            sep_2,
             s.mylayoutbox,
         },
     }

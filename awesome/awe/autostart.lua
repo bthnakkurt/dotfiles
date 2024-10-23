@@ -2,6 +2,7 @@
 require("awful.autofocus")
 
 
+awesome.spawn("brillo -S 100")
 awesome.spawn("picom")
 awesome.spawn("pipewire &")
 awesome.spawn("setxkbmap tr ")

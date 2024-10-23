@@ -16,25 +16,14 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
+
 require("awe.startup_check")
-
 beautiful.init( "/home/bai/.config/awesome/themes/default/theme.lua" )
-
 require("awe.apps")
-
-
 require("awe.layouts")
-
 require("awe.menu")
-
-
 require("awe.wibar")
-
-
-
-
 require("awe.keys")
-
 require("awe.bloat")
 require("awe.rules")
 require("awe.signals")
