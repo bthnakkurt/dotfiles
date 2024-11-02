@@ -59,6 +59,9 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
 
+
+    awful.key({ "Control" }, "Print", function () awful.spawn.with_shell(ocr) end,
+               {description = "screenshot", group = "video"}),
     awful.key({}, "Print", function () awful.spawn(screenshot) end,
                {description = "screenshot", group = "video"}),
     awful.key({}, "XF86AudioRaiseVolume", function () awful.spawn(volumeup) end,

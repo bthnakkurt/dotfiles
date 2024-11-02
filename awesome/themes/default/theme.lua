@@ -12,7 +12,7 @@ local themes_path = gfs.get_themes_dir()
 
 local theme = {}
 
-theme.font          = "Iosevka 9"
+theme.font          = "Hack 9"
 
 theme.wibar_height = 26
 

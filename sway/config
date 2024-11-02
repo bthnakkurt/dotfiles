@@ -1,14 +1,14 @@
 set $mod Mod4
 
 set $term kitty -o background_opacity=0.6
-set $filemanager kitty -o background_opacity=0.6 ranger 
-set $menu wofi --show drun
+set $filemanager pcmanfm
+set $menu tofi-drun
 set $seskontrol pavucontrol
 set $mail thunderbird
-set $webbrowser firefox
+set $webbrowser /opt/waterfox/waterfox
 
 
-output * bg ../res/bg.jpg fill
+output * bg /home/bai/.config/awesome/themes/default/background.png fill
 
     bindsym XF86Search exec $webbrowser
     bindsym XF86Favorites exec $filemanager
@@ -22,7 +22,7 @@ output * bg ../res/bg.jpg fill
     bindsym XF86AudioNext exec playerctl next #sonraki
     bindsym XF86AudioPrev exec playerctl previous #önceki
 
-
+    bindsym $mod+a exec $webbrowser
     bindsym $mod+q exec $term
     bindsym $mod+d exec $menu
     bindsym $mod+e exec $filemanager
@@ -79,7 +79,6 @@ output * bg ../res/bg.jpg fill
 
     bindsym $mod+space focus mode_toggle
 
-    bindsym $mod+a focus parent
 
 mode "resize" {
 
