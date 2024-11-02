@@ -6,6 +6,7 @@ screenshot = "/home/bai/.local/bin/at.sh"
 browser = "/opt/waterfox/waterfox"
 pdfreader = "zathura"
 ocr= "flameshot gui --raw | tesseract-ocr -l tur+eng+equ+osd  stdin stdout | xclip -in -selection clipboard"
+launcher= "rofi -show drun"
 
 brightnessup = "brillo -A 5"
 brightnessdown = "brillo -U 5"

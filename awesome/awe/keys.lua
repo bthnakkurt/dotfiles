@@ -44,7 +44,8 @@ globalkeys = gears.table.join(
         end,
         {description = "go back", group = "client"}),
 
-
+    awful.key({ modkey,           }, "d", function () awful.spawn(launcher) end,
+              {description = "open browser", group = "launcher"}),
     awful.key({ modkey,           }, "a", function () awful.spawn(browser) end,
               {description = "open browser", group = "launcher"}),
     awful.key({ modkey,           }, "z", function () awful.spawn(pdfreader) end,
