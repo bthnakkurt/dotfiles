@@ -3,13 +3,18 @@
 config=~/.config/
 theme=~/.local/share/themes/
 icons=~/.local/share/icons/
+fonts=~/.local/share/fonts/
 ask="Dark or Light? (D or L)\n install themes?(press i)"
 
 function installtheme() {
+    mkdir -p $theme
+    mkdir -p $icons
     cp -r $config/res/themes/Catppuccin-Latte-Standard-Rosewater-Light $theme
     cp -r $config/res/themes/Catppuccin-Mocha-Standard-Rosewater-Dark $theme
     cp -r $config/res/icons/catppuccin-latte-rosewater-cursors $icons
     cp -r $config/res/icons/catppuccin-mocha-rosewater-cursors $icons
+    cp -r $config/res/fonts/ $fonts
+    fc-cache -fv
 }
 
 function darktheme () {
@@ -22,6 +27,7 @@ function darktheme () {
     cp $config/res/background/b.png $config/awesome/themes/default/background.png
     rm -rf $icons/default
     ln -s $icons/catppuccin-mocha-rosewater-cursors $icons/default
+    cp $config/gtk-4.0/settings-mocha.ini $config/gtk-4.0/settings.ini
     cp $config/gtk-3.0/settings-mocha.ini $config/gtk-3.0/settings.ini
     cp $config/gtk-2.0/gtk-mocha ~/.gtkrc-2.0
     cp $config/res/Xresources-mocha.conf $config/res/Xresources
@@ -37,6 +43,7 @@ function lighttheme () {
     cp $config/res/background/goodvoid.png $config/awesome/themes/default/background.png
     rm -rf $icons/default
     ln -s $icons/catppuccin-latte-rosewater-cursors $icons/default
+    cp $config/gtk-4.0/settings-latte.ini $config/gtk-4.0/settings.ini
     cp $config/gtk-3.0/settings-latte.ini $config/gtk-3.0/settings.ini
     cp $config/gtk-2.0/gtk-latte ~/.gtkrc-2.0
     cp $config/res/Xresources-latte.conf $config/res/Xresources
