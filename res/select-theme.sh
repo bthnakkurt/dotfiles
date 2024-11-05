@@ -1,10 +1,35 @@
 #!/usr/bin/bash
 
-config=~/.config/
-theme=~/.local/share/themes/
-icons=~/.local/share/icons/
-fonts=~/.local/share/fonts/
-ask="Dark or Light? (D or L)\n install themes?(press i)"
+USER_NAME=$(whoami)
+
+home_dir="/home/$USER_NAME"
+config=$home_dir/.config
+theme=$home_dir/.local/share/themes
+icons=$home_dir/.local/share/icons
+fonts=$home_dir/.local/share/fonts
+appshortcut=$home_dir/.local/share/applications
+app=/home/$USER_NAME/.local/share/app
+ask="Dark or Light? (D or L)\ninstall themes?(press i)\ninstall needed apps?(press y)\nneeded apps?(press n)"
+
+
+
+
+function installapps() {
+    mkdir -p $app
+    mkdir -p $home_dir/Downloads/
+    # YOUTUBE MUSIC INSTALL
+    rm -rf $appshortcut/youtube-music.desktop
+    rm -rf $app/youtube-music
+    wget -P /home/$USER_NAME/Downloads -nc https://github.com/th-ch/youtube-music/releases/download/v3.6.2/YouTube-Music-3.6.2.AppImage
+    chmod +x $home_dir/Downloads/YouTube-Music-3.6.2.AppImage
+    /home/$USER_NAME/Downloads/YouTube-Music-3.6.2.AppImage --appimage-extract
+    mv $(pwd)/squashfs-root $app/youtube-music
+    sed -i "s|Exec=AppRun --no-sandbox %U|Exec=$app/youtube-music/youtube-music|" "$app/youtube-music/youtube-music.desktop"
+sed -i "s|Icon=youtube-music|Icon=$app/youtube-music/youtube-music.png|" "$app/youtube-music/youtube-music.desktop"
+    cp $app/youtube-music/youtube-music.desktop /home/$USER_NAME/.local/share/applications/
+    ## ferdium install
+
+}
 
 function installtheme() {
     mkdir -p $theme
@@ -47,13 +72,10 @@ function lighttheme () {
     cp $config/gtk-3.0/settings-latte.ini $config/gtk-3.0/settings.ini
     cp $config/gtk-2.0/gtk-latte ~/.gtkrc-2.0
     cp $config/res/Xresources-latte.conf $config/res/Xresources
-
-    
 }
 
-echo "$ask"
+echo -e "$ask"
 read output
-
 
 if [[ "$output" == "d" ]] || [[ "$output" == "D" ]] ; then
     darktheme
@@ -61,6 +83,8 @@ elif [[ "$output" == "l" ]] || [[ "$output" == "L" ]] ; then
     lighttheme
 elif [[ "$output" == "i" ]] ; then
     installtheme
+elif [[ "$output" == "y" ]] ; then
+    installapps
 else
     echo "düzgün gir"
 fi
