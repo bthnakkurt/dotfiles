@@ -53,7 +53,7 @@
 
     window_hiding_strategy: MoveOnly,
     keybind: [
-        (command: Execute, value: "pavucontrol", modifier: ["modkey"], key: "v"),
+        (command: Execute, value: "kitty -e pulsemixer", modifier: ["modkey"], key: "v"),
         (command: Execute, value: "firefox", modifier: ["modkey"], key: "w"),
         (command: Execute, value: "rofi -show drun", modifier: ["modkey"], key: "d"),
         (command: Execute, value: "kitty", modifier: ["modkey"], key: "c"),
@@ -61,7 +61,7 @@
         (command: SoftReload, value: "", modifier: ["modkey", "Shift"], key: "r"),
         (command: Execute, value: "pkill leftwm", modifier: ["modkey", "Shift"], key: "q"),
 
-        (command: Execute, value: "/home/bai/.local/bin/at.sh", modifier: [], key: "Print"),
+        (command: Execute, value: "flameshot gui", modifier: [], key: "Print"),
         (command: Execute, value: "flameshot gui --raw | tesseract-ocr -l tur+eng+equ+osd  stdin stdout | xclip -in -selection clipboard", modifier: ["Control"], key: "Print"),
 
         ( command: Execute, value: "pactl set-sink-volume @DEFAULT_SINK@ -5%", modifier: [], key: "XF86AudioLowerVolume" ),

@@ -38,7 +38,7 @@ function installtheme() {
     cp -r $config/res/themes/Catppuccin-Mocha-Standard-Rosewater-Dark $theme
     cp -r $config/res/icons/catppuccin-latte-rosewater-cursors $icons
     cp -r $config/res/icons/catppuccin-mocha-rosewater-cursors $icons
-    cp -r $config/res/fonts/ $fonts
+    cp -r $config/res/font/ $fonts
     fc-cache -fv
 }
 
