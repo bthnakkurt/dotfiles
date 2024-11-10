@@ -15,6 +15,7 @@ ask="Dark or Light? (D or L)\ninstall themes?(press i)\ninstall needed apps?(pre
 
 
 function installapps() {
+    mkdir -p $appshortcut
     mkdir -p $app
     mkdir -p $home_dir/Downloads/
     # YOUTUBE MUSIC INSTALL
@@ -49,12 +50,10 @@ function darktheme () {
     cp $config/qt5ct/qt5ct-mocha.conf $config/qt5ct/qt5ct.conf
     cp $config/qt6ct/qt6ct-mocha.conf $config/qt6ct/qt6ct.conf
     cp $config/rofi/catppuccin-mocha.rasi $config/rofi/config.rasi
-    cp $config/res/background/b.png $config/awesome/themes/default/background.png
     rm -rf $icons/default
     ln -s $icons/catppuccin-mocha-rosewater-cursors $icons/default
     cp $config/gtk-4.0/settings-mocha.ini $config/gtk-4.0/settings.ini
     cp $config/gtk-3.0/settings-mocha.ini $config/gtk-3.0/settings.ini
-    cp $config/gtk-2.0/gtk-mocha ~/.gtkrc-2.0
     cp $config/res/Xresources-mocha.conf $config/res/Xresources
 }
 
@@ -65,12 +64,10 @@ function lighttheme () {
     cp $config/qt5ct/qt5ct-latte.conf $config/qt5ct/qt5ct.conf
     cp $config/qt6ct/qt6ct-latte.conf $config/qt6ct/qt6ct.conf
     cp $config/rofi/catppuccin-latte.rasi $config/rofi/config.rasi
-    cp $config/res/background/goodvoid.png $config/awesome/themes/default/background.png
     rm -rf $icons/default
     ln -s $icons/catppuccin-latte-rosewater-cursors $icons/default
     cp $config/gtk-4.0/settings-latte.ini $config/gtk-4.0/settings.ini
     cp $config/gtk-3.0/settings-latte.ini $config/gtk-3.0/settings.ini
-    cp $config/gtk-2.0/gtk-latte ~/.gtkrc-2.0
     cp $config/res/Xresources-latte.conf $config/res/Xresources
 }
 

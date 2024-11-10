@@ -8,8 +8,12 @@
 /gtk-4.0/settings.ini
 /kitty/kitty.conf
 /pulse
-/qt5ct/qt5.conf
-/qt6ct/qt6.conf
 /rofi/config.rasi
 /res/Xresources
-
+/gtk-3.0/bookmarks
+/obsidian
+/qt5ct/qt5ct.conf
+/qt6ct/qt6ct.conf
+/torbrowser
+/pavu
+/nvim
