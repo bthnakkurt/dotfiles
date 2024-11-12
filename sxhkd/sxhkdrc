@@ -1,5 +1,5 @@
 super + c
-	kitty
+	alacritty
 
 @button8
 	pactl set-sink-volume 0 -5%
@@ -32,7 +32,7 @@ Print
 	flameshot gui
 
 super + r
-	kitty -e pulsemixer
+	alacritty -e pulsemixer
 
 super + q
 	bspc node -c

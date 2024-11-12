@@ -16,6 +16,7 @@ bspc config focus_follows_pointer true
 setxkbmap tr &
 xsetroot -cursor_name left_ptr &
 
+feh --bg-center ~/.config/res/background/b.png
 xset r rate 300 30 &
 picom &
 brillo -S 100
