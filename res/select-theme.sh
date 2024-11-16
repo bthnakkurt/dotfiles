@@ -45,8 +45,6 @@ function installtheme() {
 
 function darktheme () {
     cp $config/bat/config-mocha $config/bat/config
-    cp $config/kitty/kitty-mocha.conf $config/kitty/kitty.conf
-    cp $config/nvim/lua/bai/plugins/catppuccin-mocha.lua1 $config/nvim/lua/bai/plugins/catppuccin.lua
     cp $config/qt5ct/qt5ct-mocha.conf $config/qt5ct/qt5ct.conf
     cp $config/qt6ct/qt6ct-mocha.conf $config/qt6ct/qt6ct.conf
     cp $config/rofi/catppuccin-mocha.rasi $config/rofi/config.rasi
@@ -59,8 +57,6 @@ function darktheme () {
 
 function lighttheme () {
     cp $config/bat/config-latte $config/bat/config
-    cp $config/kitty/kitty-latte.conf $config/kitty/kitty.conf
-    cp $config/nvim/lua/bai/plugins/catppuccin-latte.lua1 $config/nvim/lua/bai/plugins/catppuccin.lua
     cp $config/qt5ct/qt5ct-latte.conf $config/qt5ct/qt5ct.conf
     cp $config/qt6ct/qt6ct-latte.conf $config/qt6ct/qt6ct.conf
     cp $config/rofi/catppuccin-latte.rasi $config/rofi/config.rasi
