@@ -66,7 +66,7 @@ layout {
     }
 }
 
-spawn-at-startup "~/build/xwayland-satellite-0.5/target/debug/xwayland-satellite"
+spawn-at-startup "xwayland"
 spawn-at-startup "swaybg" "-i" ".config/res/background/b.png"
 spawn-at-startup "foot"
 spawn-at-startup "mako"
@@ -86,7 +86,6 @@ environment {
 
 cursor {
     xcursor-size 20
-    hide-when-typing
 }
 
 animations {
@@ -147,10 +146,8 @@ binds {
 
     Mod+T { spawn "bash" "-c" "notify-send hello && exec foot"; }
 
-    // Example volume keys mappings for PipeWire & WirePlumber.
-    // The allow-when-locked=true property makes them work even when the session is locked.
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.5-"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"; }
     XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
 
