@@ -1,3 +1,5 @@
+(include "./bar.yuck")
+
 (defwindow layer1
            :monitor 0
            :geometry (geometry :x "0%"
@@ -49,7 +51,20 @@
            :stacking "bottom"
   (bg))
 
+(defwindow bar
+           :monitor 0
+           :geometry (geometry :x "0%"
+                               :y "0px"
+                               :width "80%"
+                               :height "24px"
+                               :anchor "top center")
+           :stacking "fg"
+           :exclusive true
+  (bar))
+
 
 (defwidget bg[]
   (box :class "bg"
        (image :path "/home/bai/.config/res/background/zazu.jpeg")))
+
+

@@ -1,0 +1,10 @@
+browser.safebrowsing.enabled false
+browser.safebrowsing.downloads.enabled false
+services.sync.prefs.sync.browser.safebrowsing.downloads.enabled false
+browser.safebrowsing.malware.enabled false
+services.sync.prefs.sync.browser.safebrowsing.malware.enabled false
+datareporting.healthreport.service.enabled false
+datareporting.healthreport.uploadEnabled false
+toolkit.telemetry.unified false
+toolkit.telemetry.enabled 
+

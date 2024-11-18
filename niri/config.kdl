@@ -66,12 +66,11 @@ layout {
     }
 }
 
-spawn-at-startup "xwayland"
-spawn-at-startup "swaybg" "-i" ".config/res/background/b.png"
+spawn-at-startup "xwayland-satellite"
+spawn-at-startup "/home/bai/.config/eww/a.sh"
 spawn-at-startup "foot"
 spawn-at-startup "mako"
 spawn-at-startup "pipewire"
-spawn-at-startup "waybar"
 spawn-at-startup "brillo" "-S" "100"
 
 prefer-no-csd
@@ -143,6 +142,7 @@ binds {
     Mod+C { spawn "foot"; }
     Mod+D { spawn "fuzzel"; }
     Mod+W { spawn "firefox"; }
+    Mod+V { spawn "foot" "-e" "pulsemixer";  }
 
     Mod+T { spawn "bash" "-c" "notify-send hello && exec foot"; }
 

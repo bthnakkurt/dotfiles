@@ -1,0 +1,58 @@
+(defwidget bar []
+  (box :orientation "h"
+    (workspaces) (music) (leftbar)))
+
+(defwidget leftbar []
+  (box :class "leftbar" :orientation "h" :space-evenly false :halign "end"
+      (batterys) (battery) (volume)  (time) (systray)))
+
+(defwidget music []
+  (box :class "music"
+       :orientation "h"
+       :space-evenly false
+       :halign "center"
+    {music != "" ? " ${music}" : ""}))
+
+(defwidget battery []
+  (box :class "battery"
+    {battery != "" ? " ${battery} " : ""}))
+(defwidget batterys []
+  (box :class "batterys"
+    {batterys != "" ? "${batterys} " : ""}))
+
+(defwidget volume []
+  (box :class "volume"
+    {volume != "" ? " ${volume} " : ""}))
+
+(defwidget time []
+  (box :class "time"
+    {time != "" ? " ${time} " : ""}))
+
+
+(defwidget workspaces []
+  (box :class "workspaces"
+       :orientation "h"
+       :space-evenly true
+       :halign "start"
+       :spacing 0
+    (button :onclick "niri msg action focus-workspace 1" "")
+    (button :onclick "niri msg action focus-workspace 2" "")
+    (button :onclick "niri msg action focus-workspace 3" "")
+    (button :onclick "niri msg action focus-workspace 4" "")
+    (button :onclick "niri msg action focus-workspace 5" "")
+    (button :onclick "niri msg action focus-workspace 6" "󰣭")))
+
+(defpoll time :interval "10s"
+  "date '+%H:%M %b %d, 2025'")
+
+(defpoll volume :interval "1s"
+  "pamixer --get-volume")
+
+(deflisten music :interval "10s"
+  "playerctl --follow metadata --format '{{ artist }} - {{ title }}' || true")
+
+(defpoll battery :interval "1s"
+  "cat /sys/class/power_supply/BAT1/status")
+(defpoll batterys :interval "1s"
+  "cat /sys/class/power_supply/BAT1/capacity")
+
