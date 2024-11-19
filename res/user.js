@@ -4,7 +4,7 @@ user_pref("browser.geolocation.warning.infoURL", " ");
 user_pref("geo.enabled", false);
 user_pref("geo.provider.network.url", " ");
 user_pref("toolkit.crashreporter.infoURL", " ");
-user_pref("browser.startup.page", 2);
+//user_pref("browser.startup.page", 2);
 user_pref("browser.newtabpage.activity-stream.showSponsored", false);
 user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
 user_pref("browser.newtabpage.activity-stream.default.sites", false);

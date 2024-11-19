@@ -141,7 +141,7 @@ binds {
 
     Mod+C { spawn "foot"; }
     Mod+D { spawn "fuzzel"; }
-    Mod+W { spawn "firefox"; }
+    Mod+W { spawn "prime-run" "firefox"; }
     Mod+V { spawn "foot" "-e" "pulsemixer";  }
 
     Mod+T { spawn "bash" "-c" "notify-send hello && exec foot"; }
