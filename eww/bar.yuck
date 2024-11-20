@@ -1,16 +1,21 @@
 (defwidget bar []
   (box :orientation "h"
-    (workspaces) (music) (leftbar)))
+    (start) (music) (buttobns) (leftbar)))
+
+(defwidget start []
+  (box :class "start" :orientation "h" :space-evenly false :halign "start"
+       (workspaces) (apps)))
 
 (defwidget leftbar []
   (box :class "leftbar" :orientation "h" :space-evenly false :halign "end"
       (batterys) (battery) (volume)  (time) (systray)))
 
+(defwidget buttobns []
+  (box :class "buttobns" :orientation "h" :space-evenly false :halign "center"
+       (left) (close) (right) (down) (up)))
+
 (defwidget music []
-  (box :class "music"
-       :orientation "h"
-       :space-evenly false
-       :halign "center"
+  (box :class "music" :orientation "h" :space-evenly false :halign "center"
     {music != "" ? " ${music}" : ""}))
 
 (defwidget battery []
@@ -28,11 +33,35 @@
   (box :class "time"
     {time != "" ? " ${time} " : ""}))
 
+(defwidget apps []
+  (box :class "apps" :space-evenly false :halign "start"
+    {apps != "" ? " ${apps}  " : ""}))
+
+
+(defwidget left []
+  (box :class "left" :halign "center"
+    (button :onclick "niri msg action focus-column-left" "󱞧")))
+
+(defwidget close []
+  (box :class "close" :halign "center"
+    (button :onclick "niri msg action close-window" "󰅗")))
+
+(defwidget right []
+  (box :class "right" :halign "center"
+    (button :onclick "niri msg action focus-column-right" "󱞫")))
+
+(defwidget up []
+  (box :class "up"
+    (button :onclick "niri msg action focus-workspace-up" "")))
+
+(defwidget down []
+  (box :class "down"
+    (button :onclick "niri msg action focus-workspace-down" "")))
 
 (defwidget workspaces []
   (box :class "workspaces"
        :orientation "h"
-       :space-evenly true
+       :space-evenly false
        :halign "start"
        :spacing 0
     (button :onclick "niri msg action focus-workspace 1" "")
@@ -43,7 +72,10 @@
     (button :onclick "niri msg action focus-workspace 6" "󰣭")))
 
 (defpoll time :interval "10s"
-  "date '+%H:%M %b %d, 2025'")
+  "date '+%H:%M %d %b'")
+
+(defpoll apps :interval "0s"
+  "niri msg focused-window | grep -oP '(?<=Title: ).+'")
 
 (defpoll volume :interval "1s"
   "pamixer --get-volume")
