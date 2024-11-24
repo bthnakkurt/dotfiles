@@ -1,0 +1,25 @@
+[general]
+import = [
+    "~/.config/alacritty/catppuccin-mocha.toml"
+]
+
+
+live_config_reload = true
+
+[window]
+dynamic_padding = true
+opacity = 0.7
+blur = true
+dynamic_title = true
+
+[font]
+size = 8.0
+
+[cursor]
+style = "Underline"
+
+[mouse]
+hide_when_typing = true
+
+[env]
+TERM = "xterm-256color"
