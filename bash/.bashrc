@@ -1,5 +1,5 @@
 [[ $- != *i* ]] && return
-
+PS1='[\u@\h \W]\$ '
 alias ls='eza --color=always --color-scale-mode=gradient --icons=always --hyperlink -a --group-directories-first -s=Extension'
 alias rm='trash'
 alias df='df -h'
@@ -7,15 +7,14 @@ alias free='free -h'
 alias reboot='sudo reboot'
 alias ch='chmod +x'
 alias cat='bat'
-alias feh='feh --no-fehbg'
 alias wget='wget --hsts-file ~/dotfiles/config/wget/wget-hsts'
+alias gsa="git submodule add"
 
-PS1='[\u@\h \W]\$ '
-
+export gh="https://github.com"
 export PATH="/home/bai/.local/bin:$PATH"
 export XAUTHORITY="/tmp/Xauthority"
 export INPUTRC="/tmp/inputrc"
-HISTFILE="~/.cache/.bash_history"
+HISTFILE="$HOME/.cache/.bash_history"
 
 bind 'TAB:menu-complete'
 bind '"\e[Z": menu-complete-backward'
@@ -34,5 +33,5 @@ complete -F _command doas
 FNM_PATH="/home/bai/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
-  eval "`fnm env`"
+  eval "$(fnm env)"
 fi

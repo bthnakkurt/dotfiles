@@ -14,13 +14,10 @@ bspc config focus_by_distance false
 bspc config focus_follows_pointer true
 
 setxkbmap tr &
-xsetroot -cursor_name left_ptr &
-
-feh --bg-center --no-fehbg --randomize ~/.config/res/background/*
 xset r rate 300 30 &
 picom &
+/home/bai/.config/eww/a.sh &
 brillo -S 100
 pkill pipewire &
 xrandr --dpi 100 &
-(sleep 3s && polybar) &
 (sleep 2s && pipewire) &

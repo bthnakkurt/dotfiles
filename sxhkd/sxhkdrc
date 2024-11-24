@@ -31,7 +31,10 @@ super + shift + r
 Print
 	flameshot gui
 
-super + r
+super + Print
+	 flameshot gui --raw | tesseract-ocr stdin stdout | xclip -in -selection clipboard 
+
+super + v
 	alacritty -e pulsemixer
 
 super + q
