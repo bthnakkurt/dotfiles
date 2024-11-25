@@ -64,18 +64,17 @@
        :space-evenly false
        :halign "start"
        :spacing 0
-    (button :onclick "niri msg action focus-workspace 1" "")
-    (button :onclick "niri msg action focus-workspace 2" "")
-    (button :onclick "niri msg action focus-workspace 3" "")
-    (button :onclick "niri msg action focus-workspace 4" "")
-    (button :onclick "niri msg action focus-workspace 5" "")
-    (button :onclick "niri msg action focus-workspace 6" "󰣭")))
+    (button :onclick "bspc desktop 1 --focus" "")
+    (button :onclick "bspc desktop 2 --focus" "")
+    (button :onclick "bspc desktop 3 --focus" "")
+    (button :onclick "bspc desktop 4 --focus" "")
+    (button :onclick "bspc desktop 5 --focus" "")))
 
 (defpoll time :interval "10s"
   "date '+%H:%M %d %b'")
 
 (defpoll apps :interval "0s"
-  "niri msg focused-window | grep -oP '(?<=Title: ).+'")
+  "xdotool getwindowfocus getwindowname")
 
 (defpoll volume :interval "1s"
   "pamixer --get-volume")
