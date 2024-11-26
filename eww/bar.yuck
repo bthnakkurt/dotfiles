@@ -40,15 +40,15 @@
 
 (defwidget left []
   (box :class "left" :halign "center"
-    (button :onclick "niri msg action focus-column-left" "󱞧")))
+    (button :onclick "bspc node -f west" "󱞧")))
 
 (defwidget close []
   (box :class "close" :halign "center"
-    (button :onclick "niri msg action close-window" "󰅗")))
+    (button :onclick "bspc node -c" "󰅗")))
 
 (defwidget right []
   (box :class "right" :halign "center"
-    (button :onclick "niri msg action focus-column-right" "󱞫")))
+    (button :onclick "bspc node -f east" "󱞫")))
 
 (defwidget up []
   (box :class "up"

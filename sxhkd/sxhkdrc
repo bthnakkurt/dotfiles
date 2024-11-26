@@ -1,5 +1,5 @@
 super + c
-	alacritty
+	kitty
 
 @button8
 	pactl set-sink-volume 0 -5%
@@ -35,7 +35,7 @@ super + Print
 	 flameshot gui --raw | tesseract-ocr stdin stdout | xclip -in -selection clipboard 
 
 super + v
-	alacritty -e pulsemixer
+	kitty -e pulsemixer
 
 super + q
 	bspc node -c
