@@ -89,7 +89,7 @@ user_pref("services.sync.prefs.sync.browser.newtabpage.activity-stream.showSpons
 user_pref("browser.urlbar.suggest.topsites", false);
 user_pref("services.sync.prefs.sync.browser.urlbar.suggest.topsites", false);
 user_pref("geo.prompt.testing", false);
-user_pref("layout.spellcheckDefault", "0");
+user_pref("layout.spellcheckDefault", 0);
 user_pref("services.sync.prefs.sync.layout.spellcheckDefault", false);
 user_pref("browser.preferences.experimental", false);
 user_pref("browser.preferences.moreFromMozilla", false);

@@ -9,6 +9,9 @@ alias ch='chmod +x'
 alias cat='bat'
 alias wget='wget --hsts-file ~/dotfiles/config/wget/wget-hsts'
 alias gsa="git submodule add"
+alias gpush="git add . && git commit -m 'do' && git push"
+alias sudo="doas"
+alias clear="printf '\E[H\E[3J'"
 
 export gh="https://github.com"
 export PATH="/home/bai/.local/bin:$PATH"

@@ -64,11 +64,11 @@
        :space-evenly false
        :halign "start"
        :spacing 0
-    (button :onclick "bspc desktop 1 --focus" "")
-    (button :onclick "bspc desktop 2 --focus" "")
-    (button :onclick "bspc desktop 3 --focus" "")
-    (button :onclick "bspc desktop 4 --focus" "")
-    (button :onclick "bspc desktop 5 --focus" "")))
+    (button :onclick "bspc desktop 1 --focus" "")
+    (button :onclick "bspc desktop 2 --focus" "")
+    (button :onclick "bspc desktop 3 --focus" "")
+    (button :onclick "bspc desktop 4 --focus" "")
+    (button :onclick "bspc desktop 5 --focus" "󰣭")))
 
 (defpoll time :interval "10s"
   "date '+%H:%M %d %b'")
