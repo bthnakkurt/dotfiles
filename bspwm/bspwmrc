@@ -11,7 +11,6 @@ bspc config gapless_monocle true
 bspc config pointer_follows_focus false
 bspc config focus_by_distance false
 bspc config focus_follows_pointer true
-bspc rule -a '*' state=floating
 
 rfkill unblock bluetooth 
 setxkbmap tr &
