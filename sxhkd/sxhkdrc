@@ -11,7 +11,7 @@ super + Print
 super + v
 	kitty -e pulsemixer
 
-super + shift + c
+super + a
    bspc rule -a kitty -o state=floating; kitty
 
 super + shift + q
