@@ -1,81 +1,60 @@
 super + c
 	kitty
-
-@button8
-	pactl set-sink-volume 0 -5%
-
-@button9
-	pactl set-sink-volume 0 +5%
-
-super + @button8
-  playerctl previous
-
-super + @button9
-  playerctl next
-
 super + w
 	firefox
-
-super + z
-	zathura
-
 super + d
 	rofi -i -show drun -modi drun -show-icons
-
-super + shift + q
-	bspc quit
-
-super + shift + r
-	bspc wm -r
-
 Print
 	flameshot gui
-
 super + Print
-	 flameshot gui --raw | tesseract-ocr stdin stdout | xclip -in -selection clipboard 
-
+	 flameshot gui --raw | tesseract-ocr stdin stdout | xclip -in -selection clipboard
 super + v
 	kitty -e pulsemixer
 
+super + shift + c
+   bspc rule -a kitty -o state=floating; kitty
+
+super + shift + q
+	bspc quit
 super + q
 	bspc node -c
-
 super + alt + c
 	pkill -USR1 -x sxhkd
 
 super + {_,shift + }{Left,Down,Up,Right}
 	bspc node -{f,s} {west,south,north,east}
-
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
 super + @space
 	bspc node -t \~floating
+super + f 
+  bspc node -t '~fullscreen'
 
 XF86MonBrightnessDown
 	brillo -U 5
-
 XF86MonBrightnessUp
 	brillo -A 5
-
 XF86AudioMute
-	pactl set-sink-mute 0 toggle
-
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
 XF86AudioLowerVolume
-	pactl set-sink-volume 0 -5%
-
+	pactl set-sink-volume @DEFAULT_SINK@ -5%
 XF86AudioRaiseVolume
-	pactl set-sink-volume 0 +5%
-
+	pactl set-sink-volume @DEFAULT_SINK@ +5%
 XF86AudioPlay
 	playerctl play-pause
-
 XF86AudioStop
 	playerctl stop
-
 XF86AudioPrev
 	playerctl previous
-
 XF86AudioNext
 	playerctl next
 
+@button8
+	pactl set-sink-volume @DEFAULT_SINK@ -5%
+@button9
+	pactl set-sink-volume @DEFAULT_SINK@ +5%
+super + @button8
+  playerctl previous
+super + @button9
+  playerctl next
