@@ -14,6 +14,10 @@ super + v
 super + a
    bspc rule -a kitty -o state=floating; kitty
 
+super + m
+   dunstctl close-all
+
+
 super + shift + q
 	bspc quit
 super + q
@@ -32,28 +36,26 @@ super + f
   bspc node -t '~fullscreen'
 
 XF86MonBrightnessDown
-	brillo -U 5
+	brillo -U 5 && herbe "$(brillo -G)"
 XF86MonBrightnessUp
-	brillo -A 5
+	brillo -A 5 && herbe "$(brillo -G)"
 XF86AudioMute
-	pactl set-sink-mute @DEFAULT_SINK@ toggle
+	pactl set-sink-mute @DEFAULT_SINK@ toggle && herbe "$(pamixer --get-volume)"
 XF86AudioLowerVolume
-	pactl set-sink-volume @DEFAULT_SINK@ -5%
+	pactl set-sink-volume @DEFAULT_SINK@ -5% && herbe "$(pamixer --get-volume)"
 XF86AudioRaiseVolume
-	pactl set-sink-volume @DEFAULT_SINK@ +5%
+	pactl set-sink-volume @DEFAULT_SINK@ +5% && herbe "$(pamixer --get-volume)"
 XF86AudioPlay
-	playerctl play-pause
-XF86AudioStop
-	playerctl stop
-XF86AudioPrev
+   /home/bai/.config/bspwm/music
+XF86AudioPrel
 	playerctl previous
 XF86AudioNext
 	playerctl next
 
 @button8
-	pactl set-sink-volume @DEFAULT_SINK@ -5%
+	pactl set-sink-volume @DEFAULT_SINK@ -5% && herbe "$(pamixer --get-volume)"
 @button9
-	pactl set-sink-volume @DEFAULT_SINK@ +5%
+	pactl set-sink-volume @DEFAULT_SINK@ +5% && herbe "$(pamixer --get-volume)"
 super + @button8
   playerctl previous
 super + @button9

@@ -1,0 +1,1 @@
+playerctl play-pause && herbe "$(playerctl metadata --format "{{ title }} {{status}}")"

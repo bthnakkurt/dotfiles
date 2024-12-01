@@ -12,7 +12,7 @@ bspc config pointer_follows_focus false
 bspc config focus_by_distance false
 bspc config focus_follows_pointer true
 
-
+dunst &
 setxkbmap tr &
 xset r rate 300 30 
 /home/bai/.config/eww/a.sh &
