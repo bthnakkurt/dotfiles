@@ -47,10 +47,10 @@ XF86AudioRaiseVolume
 	pactl set-sink-volume @DEFAULT_SINK@ +5% && herbe "$(pamixer --get-volume)"
 XF86AudioPlay
    /home/bai/.config/bspwm/music
-XF86AudioPrel
-	playerctl previous
+XF86AudioPrev
+	/home/bai/.config/bspwm/musicprev
 XF86AudioNext
-	playerctl next
+   /home/bai/.config/bspwm/musicnext
 
 @button8
 	pactl set-sink-volume @DEFAULT_SINK@ -5% && herbe "$(pamixer --get-volume)"
