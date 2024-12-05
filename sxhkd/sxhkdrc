@@ -51,6 +51,10 @@ XF86AudioPrev
 	/home/bai/.config/bspwm/musicprev
 XF86AudioNext
    /home/bai/.config/bspwm/musicnext
+XF86Calculator
+   herbe "$(acpi)"
+XF86Launch2
+   herbe "$(date)"
 
 @button8
 	pactl set-sink-volume @DEFAULT_SINK@ -5% && herbe "$(pamixer --get-volume)"

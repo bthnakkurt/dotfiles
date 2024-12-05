@@ -55,6 +55,10 @@
             "type": "memory"
         },
         {
+            "key": "│ {#36} time    │",
+            "type": "datetime"
+        },
+        {
             "key": "╰───────────╯",
             "type": "custom"
         }
