@@ -17,6 +17,8 @@ super + a
 super + m
    dunstctl close-all
 
+super + XF86Calculator
+   kitty -e calcurse
 
 super + shift + q
 	bspc quit
