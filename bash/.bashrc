@@ -12,7 +12,9 @@ alias gsa="git submodule add"
 alias gpush="git add . && git commit -m 'do' && git push"
 alias sudo="doas"
 alias clear="printf '\E[H\E[3J'"
+alias mr="make run"
 
+export MANPAGER="nvim +Man! -"
 export gh="https://github.com"
 export PATH="/home/bai/.local/bin:$PATH"
 export XAUTHORITY="/tmp/Xauthority"
@@ -41,6 +43,7 @@ fi
 
 updatedotfiles() {
    cd /home/bai/.config/
+   cp ~/.bash* ~/.config/bash/
    gpush
 }
 
@@ -48,3 +51,4 @@ updatenvim() {
    cd /home/bai/.config/nvim/pack/bai/start/
    find . -mindepth 1 -maxdepth 1 -type d -print -exec git -C {} pull \;
 }
+. "$HOME/.cargo/env"
