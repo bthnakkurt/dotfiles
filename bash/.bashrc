@@ -51,4 +51,10 @@ updatenvim() {
    cd /home/bai/.config/nvim/pack/bai/start/
    find . -mindepth 1 -maxdepth 1 -type d -print -exec git -C {} pull \;
 }
-. "$HOME/.cargo/env"
+
+# fnm
+FNM_PATH="/home/bai/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi

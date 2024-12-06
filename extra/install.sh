@@ -1,6 +1,6 @@
 #!/bin/sh
 
-printf "press f to install firefox \npress t for theme\n"
+printf "press f to install firefox \npress t for theme\n press r for refind"
 
 read -r answerme
 
@@ -10,10 +10,6 @@ insrefind() {
 
 insgtk() {
    doas cp ./theme/gtk/* -r /etc/
-}
-
-insthe() {
-   isdoas pacman -S --noconfirm "$1"
 }
 
 insthemes() {
@@ -38,6 +34,9 @@ if [ "$answerme" = "f" ]; then
 
 elif [ "$answerme" = "t" ]; then
    insthemes
+
+elif [ "$answerme" = "r" ]; then
+   insrefind
 
 else
    echo "gb"
