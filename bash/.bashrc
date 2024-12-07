@@ -16,7 +16,7 @@ alias mr="make run"
 
 export MANPAGER="nvim +Man! -"
 export gh="https://github.com"
-export PATH="/home/bai/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export XAUTHORITY="/tmp/Xauthority"
 export INPUTRC="/tmp/inputrc"
 HISTFILE="$HOME/.cache/.bash_history"
@@ -26,7 +26,7 @@ bind '"\e[Z": menu-complete-backward'
 bind "set show-all-if-ambiguous on"
 bind "set menu-complete-display-prefix on"
 
-fastfetch -c /home/bai/.config/fastfetch/17.jsonc
+fastfetch -c $HOME/.config/fastfetch/17.jsonc
 
 shopt -s checkwinsize
 shopt -s autocd
@@ -35,7 +35,7 @@ export HISTCONTROL="erasedups:ignorespace"
 complete -F _command doas
 
 # fnm
-FNM_PATH="/home/bai/.local/share/fnm"
+FNM_PATH="$HOME/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
   eval "$(fnm env)"
@@ -51,10 +51,3 @@ updatenvim() {
    cd /home/bai/.config/nvim/pack/bai/start/
    find . -mindepth 1 -maxdepth 1 -type d -print -exec git -C {} pull \;
 }
-
-# fnm
-FNM_PATH="/home/bai/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="$FNM_PATH:$PATH"
-  eval "`fnm env`"
-fi
