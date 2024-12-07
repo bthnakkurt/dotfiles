@@ -1,5 +1,5 @@
 xrdb ~/.config/extra/.Xresources
-xsetroot -xcf /home/bai/.local/share/icons/catppuccin-mocha-blue-cursors/cursors/left_ptr 20 &
+xsetroot -xcf $HOME/.local/share/icons/catppuccin-mocha-blue-cursors/cursors/left_ptr 20 &
 exec setxkbmap tr &
 exec herbe "$(acpi)" &
 exec xset r rate 300 30 &
