@@ -101,10 +101,10 @@ user_pref("browser.translations.panelShown", false);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("svg.context-properties.content.enabled", true);
 user_pref("layout.css.color-mix.enabled", true);
-user_pref("",);
-user_pref("",);
-user_pref("",);
-user_pref("",);
+user_pref("signon.passwordEditCapture.enabled", false);
+user_pref("signon.masterPasswordReprompt.timeout_ms", 0);
+user_pref("signon.improvedPasswordRules.enabled", false);
+user_pref("services.sync.engine.passwords", false);
 user_pref("",);
 user_pref("",);
 

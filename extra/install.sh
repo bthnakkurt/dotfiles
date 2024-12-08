@@ -5,11 +5,11 @@ printf "press f to install firefox \npress t for theme\n press r for refind"
 read -r answerme
 
 insrefind() {
-   doas cp -r ./refind/ /boot/efi/EFI/
+   su -c "cp -r ./refind/ /boot/efi/EFI/"
 }
 
 insgtk() {
-   doas cp ./theme/gtk/* -r /etc/
+   su -c "cp ./theme/gtk/* -r /etc/"
 }
 
 insthemes() {
