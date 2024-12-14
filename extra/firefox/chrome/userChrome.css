@@ -9,6 +9,12 @@
   border-inline-start: 0px solid color-mix(in srgb, currentColor 25%, transparent) !important; /*removes seperator line between toolbar item and tabs*/
 }
 
+.tab-background[selected] {
+    background-color: #111 !important;
+    background-image: none !important;
+    border: 2px solid #CD23B9;
+}
+
 #urlbar-background,#urlbar { /*makes url bar rounded*/
 
   border-radius: 20px !important;
