@@ -10,14 +10,14 @@ alias cat='bat'
 alias wget='wget --hsts-file ~/dotfiles/config/wget/wget-hsts'
 alias gsa="git submodule add"
 alias gpush="git add . && git commit -m 'do' && git push"
-alias sudo="doas"
+#alias sudo="doas"
 alias clear="printf '\E[H\E[3J'"
-alias mr="make run"
+#alias mr="make run"
 
-export MANPAGER="nvim +Man! -"
+#export MANPAGER="nvim +Man! -"
 export gh="https://github.com"
 export PATH="$HOME/.local/bin:$PATH"
-export XAUTHORITY="/tmp/Xauthority"
+#export XAUTHORITY="/tmp/Xauthority"
 export INPUTRC="/tmp/inputrc"
 HISTFILE="$HOME/.cache/.bash_history"
 

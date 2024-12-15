@@ -3,7 +3,9 @@ super + c
 super + w
 	firefox
 super + d
-	rofi -i -show drun -modi drun -show-icons
+	rofi -show drun
+super + e
+   rofi -show file-browser-extended -file-browser-show-hidden -file-browser-hide-parent
 Print
 	flameshot gui
 super + Print
