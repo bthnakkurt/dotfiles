@@ -1,1 +1,0 @@
-playerctl previous && sleep 1 && herbe "$(playerctl metadata --format "{{ title }}")"
