@@ -1,0 +1,2 @@
+[Desktop Entry]
+Exec=bash -c "brillo -S 100 && xset r rate 300 30 && setxkbmap tr && pipewire"

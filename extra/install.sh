@@ -10,12 +10,12 @@ insrefind() {
 
 insgtk() {
    su -c "cp ./theme/gtk/* -r /etc/"
+
 }
 
 insthemes() {
    echo "installing themes"
    cp -r ./theme/themes/ ~/.local/share/
-   cp -r  ./theme/fonts/ ~/.local/share/
    cp -r ./theme/icons/ ~/.local/share/
    echo "to install gtk system-wide allow this"
    insgtk
