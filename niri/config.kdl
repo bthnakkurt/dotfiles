@@ -70,7 +70,6 @@ spawn-at-startup "wpaperd"
 spawn-at-startup "waybar"
 spawn-at-startup "kitty"
 spawn-at-startup "mako"
-spawn-at-startup "xwayland-satellite"
 spawn-at-startup "brillo" "-S" "100"
 
 prefer-no-csd
@@ -80,7 +79,6 @@ environment {
     QT_QPA_PLATFORM "wayland"
     QT_QPA_PLATFORMTHEME "qt5ct"
     QT_QPA_PLATFORMTHEME "qt6ct"
-    DISPLAY ":0"
 }
 
 cursor {
@@ -141,7 +139,7 @@ binds {
 
     Mod+C { spawn "kitty"; }
     Mod+D { spawn "fuzzel"; }
-    Mod+W { spawn "prime-run" "firefox"; }
+    Mod+W { spawn "cachy-browser"; }
     Mod+V { spawn "kitty" "-e" "pulsemixer";  }
     mod+E { spawn "thunar"; }
 
