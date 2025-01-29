@@ -4,7 +4,7 @@
 
 "modules-left": ["niri/workspaces", "niri/window"],
 "modules-center": ["custom/playing"],
-"modules-right": [ "pulseaudio/slider","pulseaudio","battery","memory","cpu","clock","tray" ],
+"modules-right": ["pulseaudio","battery","memory","cpu","clock","tray" ],
 
 "tray": {
     "icon-size": 21,
@@ -44,12 +44,6 @@
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "on-click-right": "pavucontrol",
     "ignored-sinks": ["Easy Effects Sink"]
-},
-
-"pulseaudio/slider": {
-    "min": 0,
-    "max": 100,
-    "orientation": "horizontal"
 },
 
 "niri/workspaces": {

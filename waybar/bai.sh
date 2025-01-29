@@ -1,4 +1,4 @@
-#!/usr/bin/yash
+#!/usr/bin/sh
 
 playing=$(playerctl status)
 whatisplayed=$(playerctl metadata --format "{{ artist }} - {{ title }}")

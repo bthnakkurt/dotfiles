@@ -10,3 +10,5 @@ alias ls='eza --color=always --color-scale-mode=gradient --icons=always --hyperl
 alias cat='bat'
 alias cr='cargo run'
 alias c='clear'
+alias gc='git clone'
+alias pi='sudo pacman -S --needed'
