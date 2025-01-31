@@ -2,7 +2,7 @@
 "layer": "top",
 "gtk-layer-shell": false,
 
-"modules-left": ["niri/workspaces", "niri/window"],
+"modules-left": ["hyprland/workspaces", "hyprland/window"],
 "modules-center": ["custom/playing"],
 "modules-right": ["pulseaudio","battery","memory","cpu","clock","tray" ],
 
