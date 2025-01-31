@@ -27,3 +27,9 @@ Code*
 gtk*
 nwg-*
 autostart
+qt6ct/qt6ct.conf
+pcmanfm-qt/default/settings.conf
+pcmanfm-qt/default/recent-files.conf
+pavucontrol-qt/pavucontrol-qt.conf
+Kvantum/kvantum.kvconfig
+user-dirs.dirs
